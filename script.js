@@ -77,6 +77,19 @@ function clearDisplay() {
     updateDisplay();
 }
 
+//Function to delete the last character from display 
+function deleteLast() {
+    displayValue = displayValue.slice(0, -1);
+    if (secondNumber !== '') {
+        secondNumber = secondNumber.slice(0, -1);
+    } else if (operator !== '') {
+        operator = '';
+    } else {
+        firstNumber = firstNumber.slice(0, -1);
+    }
+    updateDisplay();
+}
+
 
 //Event listeners for the number buttons 
 document.getElementById("zero").addEventListener('click', () => appendToDisplay('0'));
