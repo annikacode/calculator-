@@ -23,7 +23,7 @@ function multiply (a, b) {
 // Function to divide
 function divide(a, b) {
     if (b === 0) {
-        return 'Error'
+        return 'You cannot divide by zero, silly!'
     } 
     return a / b;
 }
