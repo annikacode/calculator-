@@ -52,9 +52,19 @@ function updateDisplay() {
     display.value = displayValue;
 }
 
-//Function to append a character to the display value 
+//Function to append a character to the display value and handle operator
 function appendToDisplay(value) {
-    displayValue += value;
+    if (operator === '' && (value === '+' || value === '-' || value === '*' || value === '/')) {
+        operator = value;
+        displayValue += ` ${value} `;
+    } else {
+        displayValue += value;
+        if (operator === '') {
+            firstNumber += value;
+        } else {
+            secondNumber += value;
+        }
+    }
     updateDisplay();
 }
 
