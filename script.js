@@ -51,3 +51,9 @@ function updateDisplay() {
     const display = document.getElementById('display');
     display.value = displayValue;
 }
+
+//Function to append a character to the display value 
+function appendToDisplay(value) {
+    displayValue += value;
+    updateDisplay();
+}
