@@ -1,6 +1,7 @@
 let firstNumber = '';
 let operator = '';
 let secondNumber = '';
+let displayValue = '';
 
 
 // Function to add 
@@ -43,7 +44,6 @@ function operate(operator, a, b) {
     }
 }
 
-const displayValue = '';
 
 
 //Function to update the display
@@ -54,15 +54,19 @@ function updateDisplay() {
 
 //Function to append a character to the display value and handle operator
 function appendToDisplay(value) {
-    if (operator === '' && (value === '+' || value === '-' || value === '*' || value === '/')) {
-        operator = value;
-        displayValue += ` ${value} `;
-    } else {
+    if (!isNaN(value) || value === '.') {
         displayValue += value;
         if (operator === '') {
             firstNumber += value;
         } else {
             secondNumber += value;
+        }
+    }
+
+    else if (value === '+' || value === '-' || value === '*' || value === '/') {
+        if (operator === '') {
+            operator = value;
+            displayValue += ` ${value} `;
         }
     }
     updateDisplay();
