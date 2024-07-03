@@ -115,3 +115,9 @@ document.getElementById("seven").addEventListener('click', () => appendToDisplay
 document.getElementById("eight").addEventListener('click', () => appendToDisplay('8'));
 document.getElementById("nine").addEventListener('click', () => appendToDisplay('9'));
 document.getElementById("decimal").addEventListener('click', () => appendToDisplay('.'));
+
+//Event listeners for the operator buttons
+document.getElementById('add').addEventListener('click', () => appendToDisplay('+'));
+document.getElementById('subtract').addEventListener('click', () => appendToDisplay('-'));
+document.getElementById('multiply').addEventListener('click', () => appendToDisplay('*'));
+document.getElementById('divide').addEventListener('click', () => appendToDisplay('/'));
