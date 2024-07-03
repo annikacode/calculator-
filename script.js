@@ -1,3 +1,8 @@
+const firstNumber = '';
+const operator = '';
+const secondNumber = '';
+
+
 // Function to add 
 function add(a, b) {
     return a + b;
@@ -20,4 +25,20 @@ function divide(a, b) {
         return 'Error'
     } 
     return a / b;
+}
+
+//Function to operate based on the operator 
+function operate(operator, a, b) {
+    switch (operator) {
+        case '+':
+            return add(a, b);
+        case '-':
+            return subtract(a, b);
+        case '*':
+            return multiply(a, b);
+        case '/':
+            return divide(a, b);
+        default:
+            return 'Error';
+    }
 }
