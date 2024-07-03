@@ -107,6 +107,24 @@ function calculate() {
     updateDisplay();
 }
 
+//Function for keyboard support
+function keyboardInput(event) {
+    const key = event.key;
+    if (!isNaN(key) || key === '.') {
+        appendToDisplay(key);
+    } else if (key === '+' || key === '-' || key === '*' || key === '/') {
+        appendToDisplay(key);
+    } else if (key === 'Enter' || key === '=') {
+        calculate();
+    } else if (key === 'Backspace') {
+        deleteLast();
+    } else if (key === 'Escape') {
+        clearDisplay();
+    }
+}
+
+window.addEventListener('keydown', keyboardInput);
+
 //Event listeners for the number buttons 
 document.getElementById("zero").addEventListener('click', () => appendToDisplay('0'));
 document.getElementById("one").addEventListener('click', () => appendToDisplay('1'));
