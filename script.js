@@ -121,3 +121,8 @@ document.getElementById('add').addEventListener('click', () => appendToDisplay('
 document.getElementById('subtract').addEventListener('click', () => appendToDisplay('-'));
 document.getElementById('multiply').addEventListener('click', () => appendToDisplay('*'));
 document.getElementById('divide').addEventListener('click', () => appendToDisplay('/'));
+
+//Event listeners for clear, equal and delete buttons
+document.getElementById('clear').addEventListener('click', clearDisplay);
+document.getElementById('equals').addEventListener('click', calculate);
+document.getElementById('delete').addEventListener('click', deleteLast);
