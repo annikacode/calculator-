@@ -90,6 +90,18 @@ function deleteLast() {
     updateDisplay();
 }
 
+//Function to calculate the result and update display 
+function calculate() {
+    const num1 = parseFloat(firstNumber);
+    const num2 = parseFloat(secondNumber);
+
+    const result = operate(operator, num1, num2);
+    displayValue = result.toString();
+    firstNumber = result;
+    operator = '';
+    secondNumber = '';
+    updateDisplay();
+}
 
 //Event listeners for the number buttons 
 document.getElementById("zero").addEventListener('click', () => appendToDisplay('0'));
