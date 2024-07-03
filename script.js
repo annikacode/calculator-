@@ -1,6 +1,6 @@
-const firstNumber = '';
-const operator = '';
-const secondNumber = '';
+let firstNumber = '';
+let operator = '';
+let secondNumber = '';
 
 
 // Function to add 
@@ -67,6 +67,16 @@ function appendToDisplay(value) {
     }
     updateDisplay();
 }
+
+//Function to clear display and reset values
+function clearDisplay() {
+    displayValue = '';
+    firstNumber = '';
+    operator = '';
+    secondNumber = '';
+    updateDisplay();
+}
+
 
 //Event listeners for the number buttons 
 document.getElementById("zero").addEventListener('click', () => appendToDisplay('0'));
