@@ -42,3 +42,12 @@ function operate(operator, a, b) {
             return 'Error';
     }
 }
+
+const displayValue = '';
+
+
+//Function to update the display
+function updateDisplay() {
+    const display = document.getElementById('display');
+    display.value = displayValue;
+}
