@@ -57,3 +57,16 @@ function appendToDisplay(value) {
     displayValue += value;
     updateDisplay();
 }
+
+//Event listeners for the number buttons 
+document.getElementById("zero").addEventListener('click', () => appendToDisplay('0'));
+document.getElementById("one").addEventListener('click', () => appendToDisplay('1'));
+document.getElementById("two").addEventListener('click', () => appendToDisplay('2'));
+document.getElementById("three").addEventListener('click', () => appendToDisplay('3'));
+document.getElementById("four").addEventListener('click', () => appendToDisplay('4'));
+document.getElementById("five").addEventListener('click', () => appendToDisplay('5'));
+document.getElementById("six").addEventListener('click', () => appendToDisplay('6'));
+document.getElementById("seven").addEventListener('click', () => appendToDisplay('7'));
+document.getElementById("eight").addEventListener('click', () => appendToDisplay('8'));
+document.getElementById("nine").addEventListener('click', () => appendToDisplay('9'));
+document.getElementById("decimal").addEventListener('click', () => appendToDisplay('.'));
